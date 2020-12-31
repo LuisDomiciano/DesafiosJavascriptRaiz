@@ -1,0 +1,24 @@
+button {
+    background-color:yellowgreen;
+    border: none;
+    color: white;
+    font-size: x-large;
+    font-weight: 200;
+    height: 40px;
+
+
+}
+
+form {
+    background-color: tomato;
+    height: 200px;
+    padding: 20px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    margin: auto 0;
+}

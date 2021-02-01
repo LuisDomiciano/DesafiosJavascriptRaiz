@@ -1,3 +1,22 @@
+const $weight = document.getElementById('weight')
+const $height = document.getElementById('height')
+
+console.log($weight)
+console.log($height)
+
+document.querySelector('.form').addEventListener('submit', function (event) {
+    event.preventDefault()
+    const response = category(calculate(Number($weight.value), Number($height.value)))
+  //const imc = calculate(Number($weight.value),Number($height.value))  
+   console.log(response)
+  
+})
+console.log( category(70 / (1.60*1.60)))
+
+function calculate (weight, height) {
+    return weight / (height * height)
+}
+
 function isUnderWeight (imc) {
     return imc < 18.5
 }
@@ -16,7 +35,7 @@ function isObesityTwo (imc) {
 function isObesityThree (imc) {
     return imc >= 40
 }
-module.exports = function (imc) {
+function category (imc) {
     if (isUnderWeight(imc)) return `Imc: ${imc} está abaixo do peso`
     if (isNormalweight(imc)) return `Imc: ${imc} está com peso normal`
     if (isOverWeight(imc)) return `Imc: ${imc} está acima do peso`
@@ -24,3 +43,4 @@ module.exports = function (imc) {
     if (isObesityTwo(imc)) return `Imc: ${imc} obesidade grau 2`
     if (isObesityThree(imc)) return `Imc: ${imc} obesidade grau 3`
 }
+

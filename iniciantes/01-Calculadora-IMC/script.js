@@ -7,7 +7,6 @@ console.log($height)
 document.querySelector('.form').addEventListener('submit', function (event) {
     event.preventDefault()
     const response = category(calculate(Number($weight.value), Number($height.value)))
-   console.log(response)
    document.querySelector('#response').innerHTML = response
   
 })
